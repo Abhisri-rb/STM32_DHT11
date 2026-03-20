@@ -38,7 +38,6 @@ This project demonstrates interfacing a DHT11 temperature and humidity sensor wi
 
 ---
 
-
 ### Code Implementation
 
 ### Start Peripherals
@@ -50,7 +49,7 @@ lcd_init();                   // initialize LCD
 - Starts the timer required for microsecond delays
 - Initializes the LCD so it’s ready to display data
 
----
+
 
 ### Set Pin as Input
 ```c
@@ -67,7 +66,7 @@ void Set_Pin_Input(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)
 - Configures GPIO pin as input
 - Used to receive data from DHT11
 
----
+
 
 ### Microsecond Delay
 ```c
@@ -82,7 +81,7 @@ void delay_us(uint16_t us)
 - Waits until the specified microseconds pass
 - Ensures precise timing required by DHT11 protocol
 
-  ---
+
   
 ### DHT11 Start Signal
 ```c
@@ -103,7 +102,7 @@ void DHT11_Start(void)
 - Pulls data line LOW for 18ms to wake sensor
 - Pulls HIGH briefly and switches to input mode
 
----
+
 
 ### Check Response
 ```c
@@ -129,7 +128,7 @@ uint8_t DHT11_Check_Response(void)
 - Detects LOW → HIGH response from DHT11
 - Returns 1 if sensor responds correctly
 
----
+
 
 ### Read Data
 ```c
@@ -159,7 +158,7 @@ uint8_t DHT11_Read(void)
 - Determines bit value based on signal duration
 - Combines bits to form humidity/temperature data
   
----
+
 
 ### Main Loop (DHT11 + LCD)
 ```c
